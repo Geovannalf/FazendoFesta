@@ -6,13 +6,148 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txtGuests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convidados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtMens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homens"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGuests" />
+
+        <ImageButton
+            android:id="@+id/btnLessMens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/lessicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMens"
+            tools:srcCompat="@drawable/lessicon" />
+
+        <SeekBar
+            android:id="@+id/seekBarMens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            android:max="100"
+            android:progress="1"
+            app:layout_constraintEnd_toStartOf="@+id/btnMoreMens"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnLessWomens"
+            app:layout_constraintTop_toBottomOf="@+id/txtMens" />
+
+        <ImageButton
+            android:id="@+id/btnMoreMens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMens"
+            tools:srcCompat="@drawable/moreicon"
+            android:src="@drawable/moreicon"/>
+
+        <TextView
+            android:id="@+id/txtWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mulheres"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarMens" />
+
+        <ImageButton
+            android:id="@+id/btnLessWomens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/lessicon"
+            tools:srcCompat="@drawable/lessicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWomen" />
+
+        <SeekBar
+            android:id="@+id/seekBarWomens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            android:max="100"
+            android:progress="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWomen" />
+
+
+        <ImageButton
+            android:id="@+id/btnMoreWomens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWomen"
+            tools:srcCompat="@drawable/moreicon"
+            android:src="@drawable/moreicon"/>
+
+        <TextView
+            android:id="@+id/txtChildren"
+            android:layout_width="67dp"
+            android:layout_height="18dp"
+            android:text="Crianças"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarWomens" />
+
+        <ImageButton
+            android:id="@+id/btnMorechildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChildren"
+            tools:srcCompat="@drawable/moreicon"
+            android:src="@drawable/moreicon"/>
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChildren" />
+
+
+        <ImageButton
+            android:id="@+id/btnLessChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/lessicon"
+            tools:srcCompat="@drawable/lessicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChildren" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
